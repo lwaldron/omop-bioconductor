@@ -1,6 +1,6 @@
 # Open questions
 
-Grouped by who can answer. To be filed as GitHub issues, one per group; this file is the index.
+Grouped by who can answer. Tracked as GitHub issues #1 to #7, one per group; this file is the index.
 
 ## Catalogues and standards (EMA, HealthDCAT-AP, FDP, Health-RI, DbDiagnostics)
 

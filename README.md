@@ -22,7 +22,7 @@ Draft project: make OMOP CDM health data findable and accessible to Bioconductor
 | Survey of FAIR Data Points for OMOP and genomic datasets | done | [survey/](survey/) |
 | Landscape of catalogues, Beacon and synthetic data | draft | [docs/landscape.md](docs/landscape.md) |
 | Design of the OMOP to Bioconductor package | draft | [docs/package-design.md](docs/package-design.md) |
-| Open questions for maintainers and standards bodies | draft, to be filed as issues | [docs/questions.md](docs/questions.md) |
+| Open questions for maintainers and standards bodies | tracked in issues #1 to #7 | [docs/questions.md](docs/questions.md) |
 | Catalogue client, Beacon client, ExperimentHub resources | idea | [docs/package-design.md](docs/package-design.md#related-ideas) |
 
 ## License
