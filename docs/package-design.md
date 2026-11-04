@@ -21,6 +21,7 @@ Goal: a Bioconductor package that loads OMOP data as Bioconductor structures, do
 - delphi-100k (99,523 persons, CDM 5.4) has populated, simulated Genomic-CDM tables: 70 SNPs by rsID on GRCh37, one specimen per person, HGNC gene IDs, GWAS-style annotations. CDMConnector already attaches these tables to the `cdm_reference`. Provenance is documented in `cdm_source`; the dataset license is not stated.
 - Genomic-CDM `VARIANT_OCCURRENCE` has no chromosome, start or end: only `rs_id`, `reference_sequence`, `hgvs_c` and `hgvs_p`. In delphi only `rs_id` and alleles are filled. Conversion to `VRanges` needs rsID resolution against the build named in `GENOMIC_TEST.reference_genome` (for example via `SNPlocs.Hsapiens.dbSNP155.GRCh37`).
 - `specimen` is the join between `person_id` and genomic rows, so it is the natural `MultiAssayExperiment` sample map.
+- Vocabulary lookups come from the CDM's own vocabulary tables or a user-supplied Athena download; the package ships no vocabulary files (#9). OMOP Genomic concepts carry HGVS synonyms (RefSeq and Ensembl) and GRCh38 positions in their names, but no rsIDs, ClinVar or HGNC IDs, so those are the join keys.
 - `VOCABULARY.vocabulary_version` carries per-vocabulary versions; published dataset metadata usually gives only the overall string.
 
 ## Documentation and tests
