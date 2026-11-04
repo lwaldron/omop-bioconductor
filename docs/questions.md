@@ -32,10 +32,10 @@ Grouped by who can answer. To be filed as GitHub issues, one per group; this fil
 17. Are the zips versioned and immutable, and could `omock::mockDatasets` carry checksum, version and landing page?
 18. Who controls the Azure and S3 hosting, is there a mirror, and could `drug_strength` move off Dropbox?
 19. Can the datasets be read without R (Parquet plus manifest)?
-20. What is delphi-100k: source, generator, parameters? Are its Genomic-CDM tables populated, and do they use OMOP Genomic concept IDs?
+20. delphi-100k's `cdm_source` documents its origin (Delphi-2M, ETLDelphi) and its genomic tables are populated with simulated SNPs. Could that description also be published outside the zip, and could the genomic rows reference OMOP Genomic concept IDs as well as rsIDs?
 21. Which vocabulary release does each dataset use, per vocabulary?
 22. Could each dataset ship a machine-readable data dictionary, for example an OmopSketch `summarised_result`?
-23. What license covers each dataset? GiBleed is Apache-2.0 in EunomiaDatasets; what covers delphi and the Azure copies?
+23. What license covers each dataset? GiBleed is Apache-2.0 in EunomiaDatasets; what covers delphi (model weights are CC BY-NC-ND 4.0; the synthetic output's license is not stated) and the Azure copies?
 
 ## Vocabularies (Athena, Vocabulary-v5.0, Genomic-CDM)
 
@@ -43,7 +43,7 @@ Grouped by who can answer. To be filed as GitHub issues, one per group; this fil
 25. Could the unrestricted parts of the vocabularies be a versioned AnnotationHub resource?
 26. Which identifiers do OMOP Genomic concepts use for genes and variants, and how do they map to `org.Hs.eg.db`, `TxDb`/`EnsDb`?
 27. Could the OMOP Genomic source files move from Google Drive to a versioned, citable location?
-28. Is there an intended route from Genomic-CDM tables to `VRanges`, and is `reference_genome` populated?
+28. Is there an intended route from Genomic-CDM tables to `VRanges`? delphi fills `reference_genome` (GRCh37) and `rs_id` but not HGVS; is that the pattern real sites follow?
 
 ## Bioconductor and OHDSI package communities
 

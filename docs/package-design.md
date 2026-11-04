@@ -18,8 +18,9 @@ Goal: a Bioconductor package that loads OMOP data as Bioconductor structures, do
 ## Data constraints
 
 - GiBleed (2,694 persons, CDM 5.3, Synthea-derived, Apache-2.0) can be redistributed: its `concept` table has 444 concepts from RxNorm, SNOMED, LOINC, CVX, ICD10CM and NDC, none from licensed vocabularies.
-- delphi-100k (100k persons, CDM 5.4) includes Genomic-CDM tables, but its origin and license are undocumented.
-- Genomic-CDM `VARIANT_OCCURRENCE` has no chromosome, start or end: only `rs_id`, transcript `reference_sequence`, `hgvs_c` and `hgvs_p`. `GENOMIC_TEST` has an optional `reference_genome`. Conversion to `VRanges` needs HGVS or rsID resolution against a build.
+- delphi-100k (99,523 persons, CDM 5.4) has populated, simulated Genomic-CDM tables: 70 SNPs by rsID on GRCh37, one specimen per person, HGNC gene IDs, GWAS-style annotations. CDMConnector already attaches these tables to the `cdm_reference`. Provenance is documented in `cdm_source`; the dataset license is not stated.
+- Genomic-CDM `VARIANT_OCCURRENCE` has no chromosome, start or end: only `rs_id`, `reference_sequence`, `hgvs_c` and `hgvs_p`. In delphi only `rs_id` and alleles are filled. Conversion to `VRanges` needs rsID resolution against the build named in `GENOMIC_TEST.reference_genome` (for example via `SNPlocs.Hsapiens.dbSNP155.GRCh37`).
+- `specimen` is the join between `person_id` and genomic rows, so it is the natural `MultiAssayExperiment` sample map.
 - `VOCABULARY.vocabulary_version` carries per-vocabulary versions; published dataset metadata usually gives only the overall string.
 
 ## Documentation and tests
