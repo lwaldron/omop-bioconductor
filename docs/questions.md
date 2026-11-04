@@ -45,6 +45,12 @@ Grouped by who can answer. Tracked as GitHub issues #1 to #7, one per group; thi
 27. Could the OMOP Genomic source files move from Google Drive to a versioned, citable location?
 28. Is there an intended route from Genomic-CDM tables to `VRanges`? delphi fills `reference_genome` (GRCh37) and `rs_id` but not HGVS; is that the pattern real sites follow?
 
+## GA4GH VRS and Cat-VRS (issue #10, see docs/vrs-alignment.md)
+
+28a. OHDSI Vocabulary workgroup: would OMOP Genomic carry VRS computed identifiers as synonyms or a crosswalk, and accept a mapping from its concept classes to Cat-VRS constraint types?
+28b. OHDSI Genomic-CDM: could `variant_occurrence` gain structured location columns or a VRS ID column, with normalisation at ETL?
+28c. GA4GH Cat-VRS: is there a maintained Cat-VRS resource whose `mappings` could include OMOP Genomic codes?
+
 ## Bioconductor and OHDSI package communities
 
 29. Would omock maintainers support an ExperimentHub resource wrapping the synthetic datasets?
