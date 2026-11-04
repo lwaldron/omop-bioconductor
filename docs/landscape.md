@@ -48,6 +48,15 @@ Genomic data is becoming findable through these catalogues; OMOP data mostly is 
 - FinnGen participates in GDI, and its October 2025 lab-value GWAS identifies 383 lab measurements by OMOP concept IDs ([browser](https://labvalues.finngen.fi)).
 - Bioconductor: [pgxRpi](https://bioconductor.org/packages/pgxRpi) is a Beacon v2 client for Progenetix only; GA4GHclient and GA4GHshiny target older GA4GH APIs. No general Beacon v2 client.
 
+## R software for OMOP
+
+[awesome-OMOP](https://github.com/aryacsoman/awesome-OMOP) (MIT) lists 27 R packages for OMOP analysis, mostly HADES and darwin-eu. Last updated January 2025; several links point to repositories that do not exist under the OHDSI organisation (CohortSurvival, DrugUtilisation, dsOMOP, ROMOP, allofus, PopulationLevelEstimation), and the contributing link is a placeholder. Two entries matter for running Bioconductor code where secured data lives:
+
+- [allofus](https://roux-ohdsi.github.io/allofus/) (CRAN, `roux-ohdsi/allofus`): interface to the All of Us Researcher Workbench, which holds OMOP CDM data in BigQuery. A worked example of the "same code inside the enclave" route.
+- [dsOMOP](https://github.com/isglobal-brge/dsOMOP) (`isglobal-brge`, active): OMOP CDM access from DataSHIELD, with server-side disclosure controls (small-cell suppression, count banding). A federated route that never exposes person-level rows.
+
+OHDSI's own catalogue of packages is [HADES](https://ohdsi.github.io/Hades/packages.html); darwin-eu's is at [oxford-pharmacoepi.github.io/Oxinfer](https://oxford-pharmacoepi.github.io/Oxinfer/packages/summary.html).
+
 ## Synthetic OMOP data
 
 Used by OHDSI and DARWIN EU training, for example the [Oxford RWE Summer School 2026](https://github.com/oxford-pharmacoepi/RealWorldEvidenceSummerSchool2026).

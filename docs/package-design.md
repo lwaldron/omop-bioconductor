@@ -7,6 +7,7 @@ Goal: a Bioconductor package that loads OMOP data as Bioconductor structures, do
 - **Input is a CDMConnector `cdm_reference`, not a file.** The same code runs on DuckDB synthetic data (omock, or an ExperimentHub copy), the MIMIC-IV demo, and Postgres, SQL Server, Databricks or Snowflake inside an enclave. Only the `DBI` connection changes.
 - **Compute in the database** (dbplyr); pull only what is needed into R.
 - **Enclave constraints:** CRAN and Bioconductor dependencies only, small footprint, no internet at run time.
+- **Execution routes to support:** direct `DBI` connection inside an enclave (All of Us via `allofus` and BigQuery; FinnGen sandbox; GDI nodes); DataSHIELD via `dsOMOP`, where only server-reviewed aggregates return to the client.
 
 ## Outputs
 

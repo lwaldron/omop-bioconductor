@@ -17,7 +17,7 @@ Grouped by who can answer. To be filed as GitHub issues, one per group; this fil
 8. Do GDI FDP nodes link genomic datasets to clinical datasets of the same participants, and in which vocabulary?
 9. Does FinnGen, or any GDI node, expose OMOP-structured phenotype tables in its secure environment, and which tables and version?
 10. Which databases run inside FinnGen, GDI nodes, All of Us and AnVIL, and does CDMConnector reach each?
-11. Can Bioconductor packages be installed in those environments?
+11. Can Bioconductor packages be installed in those environments, and can `dsOMOP` return objects a DataSHIELD client could turn into a `SummarizedExperiment`?
 12. Does the OMOP `specimen` table, in real biobank-linked databases, carry the sample identifiers used in omics files?
 
 ## Beacon (GA4GH, CNAG, pgxRpi)
@@ -50,9 +50,10 @@ Grouped by who can answer. To be filed as GitHub issues, one per group; this fil
 29. Would omock maintainers support an ExperimentHub resource wrapping the synthetic datasets?
 30. Would darwin-eu/OHDSI package authors consider Bioconductor submission or cross-listing in a workflow?
 31. Are there small, stable fixtures a Bioconductor package could depend on in tests?
-32. What is the recommended way to link `person_id` data to sample-keyed omics (`MultiAssayExperiment` sample maps), and would a worked example be welcome?
+32. Would the awesome-OMOP maintainer accept corrected links and a Bioconductor section, or should this project keep its own list?
+33. What is the recommended way to link `person_id` data to sample-keyed omics (`MultiAssayExperiment` sample maps), and would a worked example be welcome?
 
 ## Training materials (Oxford RWE Summer School)
 
-33. What license covers the slides and code, and could an `renv.lock` or `sessionInfo()` be published with the site?
-34. The committed `GiBleed_database_description.json` describes GiBleed as Eunomia stochastic simulation while the database's `cdm_source` names Synthea; which is right, and can the two be reconciled?
+34. What license covers the slides and code, and could an `renv.lock` or `sessionInfo()` be published with the site?
+35. The committed `GiBleed_database_description.json` describes GiBleed as Eunomia stochastic simulation while the database's `cdm_source` names Synthea; which is right, and can the two be reconciled?
