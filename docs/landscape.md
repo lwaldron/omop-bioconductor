@@ -73,7 +73,9 @@ Used by OHDSI and DARWIN EU training, for example the [Oxford RWE Summer School 
 | `s3://ohdsi-sample-data` (OHDSI-in-a-Box) | SynPUF, Synthea, vocabulary sets; publicly listable | No README, license or manifest |
 | [OMOP CDM spec](https://ohdsi.github.io/CommonDataModel/) | Field-level dictionary, `CDM_SOURCE` | |
 | [Genomic-CDM](https://github.com/OHDSI/Genomic-CDM) v2.0 | Spec for `genomic_test`, `target_gene`, `variant_occurrence`, `variant_annotation` | Prototype; not in core CDM |
-| [Athena](https://athena.ohdsi.org) | Standardized Vocabularies browser and download | Licensed vocabularies gated; scripted requests refused |
+| [Athena](https://athena.ohdsi.org) | Standardized Vocabularies browser and download | Licensed vocabularies gated; no API |
+| [OMOPHub](https://omophub.com) | Commercial API over the vocabularies (search, hierarchies, mappings, FHIR terminology, pinned releases); R client `omophub` on CRAN (MIT) | Free tier 3,000 calls/month, then paid; CPT4 needs a user-validated UMLS license |
+| [CodelistGenerator](https://darwin-eu.github.io/CodelistGenerator/) (CRAN) and [chariot](https://github.com/meerapatelmd/chariot) | Query a local vocabulary copy: CodelistGenerator against any `cdm_reference`; chariot against Postgres | chariot unlicensed, last push 2022, GitHub-only dependencies |
 | [Vocabulary-v5.0](https://github.com/OHDSI/Vocabulary-v5.0) | Build scripts, dated releases, `OMOP Genomic` vocabulary (source CSVs on Google Drive) | Source vocabularies keep their own licenses |
 | [OmopSketch](https://ohdsi.github.io/OmopSketch/) | Database characterisation as `summarised_result` | Not published alongside the datasets |
 
